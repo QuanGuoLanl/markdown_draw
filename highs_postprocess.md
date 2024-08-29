@@ -1,7 +1,7 @@
 
 # HiGHS Post-Process
 ## Output files
-CPLEX: 'solution.sol', continuously updated during the optimization to reflect the current best solution, ensuring the file always contains only the latest optimal result (solution.sol can be displayed in SimCCS UI). 
+CPLEX: 'solution.sol', continuously updated during the optimization to reflect the current best solution, ensuring the file always contains only the latest optimal result. Solution in this format (.xml) can be displayed in SimCCS UI. 
 
 HiGHS:
 1. 'solution.highs': record the final best solution after the optimization is complete. No data will be written until the process has fully concluded.
@@ -10,7 +10,7 @@ HiGHS:
 
 ```mermaid
 flowchart TB
-    subgraph Top
+    subgraph Output Content
         direction TB
         A[CPLEX] --> B[solution.sol]
         C[HiGHS] --> D[solution.highs]
